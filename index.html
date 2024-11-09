@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Resume Builder</h1>
+    <form id="resumeForm">
+      <h2>Personal Information</h2>
+      <label for="Username">Username:</label>
+      <input type="text" id="Username" placeholder="Enter your name" required>
+      <label>Name: <input type="text" id="name" required></label>
+      <label>Email: <input type="email" id="email" required></label>
+      <label>Phone: <input type="tel" id="phone" required></label>
+
+      <h2>Education</h2>
+      <label>School Name: <input type="text" id="school"></label>
+      <label>Degree: <input type="text" id="degree"></label>
+      <label>Field of Study: <input type="text" id="field"></label>
+      <label>Graduation Year: <input type="text" id="graduationYear"></label>
+
+      <h2>Work Experience</h2>
+      <label>Job Title: <input type="text" id="jobTitle"></label>
+      <label>Company: <input type="text" id="company"></label>
+      <label>Years of Experience: <input type="text" id="experience"></label>
+
+      <h2>Skills</h2>
+      <label>Skills: <input type="text" id="skills" placeholder="Comma-separated"></label>
+
+      <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resumeOutput" class="resume-preview" contenteditable="true"></div>
+  </div>
+
+  <div id="shareableLinkContainer" style="display: none;">
+    <h2>Shareable Link</h2>
+    <p>Unique link:</p>
+    <a href="#" id="shareableLink" target="_blank"></a>
+    <br>
+    <button id="pdfButton">Download as PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
